@@ -1,5 +1,7 @@
 ### FUNCTIONAL 
-
+from random import randrange
+from random import randint
+from random import choice
 
 def get_generation(input_array, generation):
     from itertools import product, permutations
@@ -106,3 +108,25 @@ def cgol(array):
     if array==output:
         return output
     return cgol(output)
+
+
+def generate_random_array(length, width):
+    output = [[0 for i in range(width)] 
+              for _ in range(length)]
+    for list in output:
+        for i in range(len(list)):
+            list[i] = choice([0,0,0,1])
+
+    return output
+
+array_one = [
+    [0,0,1,0],
+    [0,0,1,0],
+    [0,0,1,0],
+    [0,0,0,0]
+]
+
+array_two = []
+
+
+array_three = []
